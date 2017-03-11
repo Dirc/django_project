@@ -29,7 +29,12 @@ Browse to your container, e.g. 172.17.0.2:8000
 Create a django project inside your container /code dir:
 
 ```
-django-admin.py startproject django_project
+cd /code
+/django-admin.py startproject django_project
+cd /code/django_project
+python manage.py startapp rango
 ```
+
+Add 'rango' to INSTALLED_APPS in settings.py
 
 
