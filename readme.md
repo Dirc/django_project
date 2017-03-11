@@ -12,7 +12,7 @@ docker build -t django:v1 .
 Docker run container
 
 ```
-docker run -it -v /home/eric/code/django_project/code:/code tango:v1 /bin/bash
+docker run -it -v /home/eric/code/django_project/code:/code -p 8000:8000 tango:v5 /bin/bash
 ```
 
 Temporary workaround: Start django server inside container
@@ -21,7 +21,7 @@ Temporary workaround: Start django server inside container
 python /code/django_project/manage.py runserver 0.0.0.0:8000
 ```
 
-Browse to your container, e.g. 172.17.0.2:8000
+Browse to your container, e.g. 172.17.0.2:8000 or 192.168.1.74:8000.
 
 
 # Django
